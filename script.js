@@ -8,6 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load tasks from local storage
     let tasks = JSON.parse(localStorage.getItem('antiGravityTasks')) || [];
+
+    // Check for daily reset
+    const today = new Date().toDateString();
+    const lastReset = localStorage.getItem('antiGravityLastReset');
+    
+    if (lastReset !== today) {
+        tasks = [];
+        localStorage.setItem('antiGravityLastReset', today);
+        localStorage.setItem('antiGravityTasks', JSON.stringify(tasks));
+    }
     let currentPercentage = 0;
     let animationFrameId = null;
 
