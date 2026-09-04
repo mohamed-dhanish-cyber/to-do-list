@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Gravity To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="glow">TO DO LIST</h1>
+            <p>Launch your goals into orbit.</p>
+        </header>
+
+        <div class="stats-container">
+            <canvas id="stats-graph" width="200" height="200"></canvas>
+            <div id="stats-text" class="stats-text">0% Completed</div>
+            <div id="reward-section" class="reward-section hidden">
+                <h2>🚀 ALHAMDULILLAH 🚀</h2>
+                <p>All tasks successfully executed!</p>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <input type="text" id="task-input" placeholder="Enter a new mission..." autocomplete="off">
+            <button id="launch-btn">LAUNCH</button>
+        </div>
+
+        <ul id="task-list">
+            <!-- Tasks will be injected here by JS -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
